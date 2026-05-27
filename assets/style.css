@@ -209,6 +209,18 @@ h1 {
   object-fit: cover;
   background: linear-gradient(135deg, #0b0b0b, #3b2a2a 55%, #090909);
 }
+.photo-credit {
+  margin: 0;
+  padding: .45rem .85rem;
+  background: rgba(255, 244, 223, .9);
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.35;
+}
+.photo-credit a,
+.footer-credit a {
+  font-weight: 800;
+}
 .photo-placeholder {
   display: grid;
   place-items: center;
@@ -240,6 +252,11 @@ footer {
   text-align: center;
   background: var(--brick-dark);
   color: rgba(255,255,255,.86);
+}
+footer p { margin: .25rem 0; }
+.footer-credit {
+  font-size: .82rem;
+  color: rgba(255,255,255,.72);
 }
 footer a { color: white; font-weight: 800; }
 
