@@ -75,8 +75,8 @@ const galleries = {
     title: "Kępa Bazarowa",
     description: "Panorama z tarasu widokowego oraz ujęcia wyspy i Wisły.",
     images: [
-      ["Przeciwległy brzeg Wisły", "Panorama_Kepy_Bazarowej.JPG", "Pko, Wikimedia Commons, CC BY-SA 4.0"],
-      ["Widok od prawej strony", "Widok_zza_Wisły_na_Toruń,_20210908_1711_2822.jpg", "Jakub Hałun, Wikimedia Commons, CC BY-SA 4.0"],
+      ["Pałac Widokowy w tle", "assets/images/kepa-palac-widokowy.jpg", "Kadr z pliku Pko, Wikimedia Commons, CC BY-SA 4.0", "Panorama_Kepy_Bazarowej.JPG"],
+      ["Przeciwległy brzeg Wisły", "assets/images/kepa-brzeg-wisly.jpg", "Kadr z pliku Pko, Wikimedia Commons, CC BY-SA 4.0", "Panorama_Kepy_Bazarowej.JPG"],
       ["Wyspa", "Torun_Kepa_Bazarowa_5.jpg", "Pko, Wikimedia Commons, licencja przy pliku"]
     ]
   },
@@ -104,22 +104,24 @@ const params = new URLSearchParams(window.location.search);
 const place = params.get("place");
 const gallery = galleries[place] || galleries.ratusz;
 
-const filePath = (file) => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}`;
+const filePath = (file) => file.startsWith("assets/")
+  ? file
+  : `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}`;
 const sourcePath = (file) => `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(file.replaceAll(" ", "_"))}`;
 
 document.title = `${gallery.title} | Galeria zdjęć`;
 document.getElementById("gallery-title").textContent = gallery.title;
 document.getElementById("gallery-description").textContent = gallery.description;
 
-document.getElementById("gallery-grid").innerHTML = gallery.images.map(([label, file, credit]) => `
+document.getElementById("gallery-grid").innerHTML = gallery.images.map(([label, file, credit, sourceFile = file]) => `
   <article class="gallery-card">
-    <a href="${sourcePath(file)}">
+    <a href="${sourcePath(sourceFile)}">
       <img src="${filePath(file)}" alt="${gallery.title}: ${label}" />
     </a>
     <div>
       <h2>${label}</h2>
       <p>${credit}</p>
-      <a href="${sourcePath(file)}">Opis pliku i licencja</a>
+      <a href="${sourcePath(sourceFile)}">Opis pliku i licencja</a>
     </div>
   </article>
 `).join("");
