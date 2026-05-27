@@ -76,7 +76,7 @@ const galleries = {
     description: "Panorama z tarasu widokowego oraz ujęcia wyspy i Wisły.",
     images: [
       ["Panorama dzienna", "Torun_panorama_zza_Wisly_3.jpg", "Andrzej Otrębski, Wikimedia Commons, CC BY-SA 4.0"],
-      ["Szeroka panorama", "Torun_panorama_zza_Wisly_2_(cropped).jpg", "Andrzej Otrębski, Wikimedia Commons, CC BY-SA 4.0"],
+      ["Widok od prawej strony", "Widok_zza_Wisły_na_Toruń,_20210908_1711_2822.jpg", "Jakub Hałun, Wikimedia Commons, CC BY-SA 4.0"],
       ["Wyspa", "Torun_Kepa_Bazarowa_5.jpg", "Pko, Wikimedia Commons, licencja przy pliku"]
     ]
   },
