@@ -209,6 +209,18 @@ h1 {
   object-fit: cover;
   background: linear-gradient(135deg, #0b0b0b, #3b2a2a 55%, #090909);
 }
+.photo-link {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+}
+.photo-link img {
+  transition: transform .25s ease, filter .25s ease;
+}
+.photo-link:hover img {
+  transform: scale(1.04);
+  filter: saturate(1.08);
+}
 .photo-credit {
   margin: 0;
   padding: .45rem .85rem;
@@ -247,6 +259,49 @@ h1 {
   box-shadow: var(--shadow);
   font-size: clamp(7rem, 16vw, 13rem);
 }
+.gallery-page .gallery-intro {
+  padding-bottom: 2rem;
+}
+.secondary-button {
+  background: var(--brick-dark);
+  color: white;
+}
+.gallery-section {
+  padding-top: 0;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.gallery-card {
+  overflow: hidden;
+  border-radius: 28px;
+  background: rgba(255,255,255,.86);
+  border: 1px solid rgba(255,255,255,.78);
+  box-shadow: var(--shadow);
+}
+.gallery-card img {
+  width: 100%;
+  height: 320px;
+  display: block;
+  object-fit: cover;
+}
+.gallery-card div {
+  padding: 1rem 1.1rem 1.2rem;
+}
+.gallery-card h2 {
+  margin: 0 0 .35rem;
+  font-size: 1.2rem;
+  line-height: 1.15;
+}
+.gallery-card p {
+  margin: 0 0 .65rem;
+  color: var(--muted);
+}
+.gallery-card a {
+  font-weight: 800;
+}
 footer {
   padding: 2rem 1rem;
   text-align: center;
@@ -263,7 +318,8 @@ footer a { color: white; font-weight: 800; }
 @media (max-width: 860px) {
   .site-header { align-items: flex-start; flex-direction: column; }
   nav { justify-content: flex-start; }
-  .cards, .split, .place-grid { grid-template-columns: 1fr; }
+  .cards, .split, .place-grid, .gallery-grid { grid-template-columns: 1fr; }
   .hero { min-height: 82vh; }
   .illustration { min-height: 220px; }
+  .gallery-card img { height: 260px; }
 }

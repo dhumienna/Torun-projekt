@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galeria zdjęć | Toruń</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Toruń</a>
+    <nav aria-label="Główna nawigacja">
+      <a href="pages/zabytki.html">Zabytki</a>
+      <a href="pages/pierniki.html">Pierniki</a>
+      <a href="pages/kopernik.html">Kopernik</a>
+      <a href="pages/relaks.html">Relaks</a>
+    </nav>
+  </header>
+
+  <main class="subpage gallery-page">
+    <section class="section gallery-intro">
+      <p class="eyebrow">Galeria obiektu</p>
+      <h1 id="gallery-title">Galeria zdjęć</h1>
+      <p id="gallery-description" class="lead">Trzy ujęcia wybranego miejsca z materiałów na wolnych licencjach.</p>
+      <a class="button secondary-button" href="index.html">Wróć do strony głównej</a>
+    </section>
+
+    <section class="section gallery-section" aria-label="Zdjęcia obiektu">
+      <div id="gallery-grid" class="gallery-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projekt: przewodnik po Toruniu • Gotyk, piernik i kosmos</p>
+    <p class="footer-credit">Zdjęcia w galeriach pochodzą z Wikimedia Commons albo z domeny publicznej. Szczegóły licencji są pod każdym zdjęciem.</p>
+  </footer>
+
+  <script src="assets/gallery.js"></script>
+</body>
+</html>
