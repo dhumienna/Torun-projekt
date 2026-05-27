@@ -76,7 +76,7 @@ const galleries = {
     description: "Panorama z tarasu widokowego oraz ujęcia wyspy i Wisły.",
     images: [
       ["Pałac Widokowy w tle", "assets/images/kepa-palac-widokowy.jpg", "Kadr z pliku Pko, Wikimedia Commons, CC BY-SA 4.0", "Panorama_Kepy_Bazarowej.JPG"],
-      ["Przeciwległy brzeg Wisły", "assets/images/kepa-brzeg-wisly.jpg", "Kadr z pliku Pko, Wikimedia Commons, CC BY-SA 4.0", "Panorama_Kepy_Bazarowej.JPG"],
+      ["Mała Wisełka i moczary", "assets/images/kepa-mala-wiselka-moczary.jpg", "Kadr z pliku Pko, Wikimedia Commons, CC BY-SA 4.0", "Torun_Mala_Wiselka_i_Kepa_Bazarowa_(2).JPG"],
       ["Wyspa", "Torun_Kepa_Bazarowa_5.jpg", "Pko, Wikimedia Commons, licencja przy pliku"]
     ]
   },
